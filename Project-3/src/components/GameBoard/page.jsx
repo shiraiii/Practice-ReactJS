@@ -23,19 +23,21 @@ const GameBoard = () => {
     const newRandomNumber = Math.floor(Math.random() * 6) + 1;
     setRandomNumber(newRandomNumber);
     if (chooseNumber === newRandomNumber) {
-      setTotalScore((prevScore) => prevScore + 1);
+      setTotalScore((prevScore) => prevScore + chooseNumber);
+      setError(false);
+    } else if (chooseNumber !== newRandomNumber) {
+      setTotalScore((prevScore) => prevScore - 2);
       setError(false);
     }
+    setChooseNumber(0);
   };
   const resetScore = () => {
     setTotalScore(0);
+    setChooseNumber(0);
   };
-  console.log(
-    "choose number is: " + chooseNumber + " random number is: " + randomNumber
-  );
 
   const handleShowRules = () => {
-    setShowRules(true);
+    setShowRules(!showRules);
   };
 
   return (

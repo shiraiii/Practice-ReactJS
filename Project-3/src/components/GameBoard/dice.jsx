@@ -26,7 +26,7 @@ const Dice = ({ rollDice, randomNumber, resetScore, handleShowRules }) => {
       <p className="font-[500] text-[24px]">Click on Dice to roll</p>
       <button
         onClick={() => resetScore()}
-        className="border w-[220px] h-[44px] rounded-md pt-[10px] pb-[10px] pr-[18px] pl-[18px] bg-transparent text-black cursor-pointer"
+        className="border w-[220px] h-[44px] rounded-md pt-[10px] pb-[10px] pr-[18px] pl-[18px] bg-transparent text-black cursor-pointer hover:bg-black hover:text-white"
       >
         Reset Score
       </button>
